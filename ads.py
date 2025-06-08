@@ -26,7 +26,7 @@ logging.basicConfig(
 
 # Auto-Reply Message
 AUTO_REPLY_MESSAGE = """
-https://t.me/+85D8UugTw485YmY1
+https://t.me/+5ShEAljjTO1jNmU1
 """
 
 def display_banner():
