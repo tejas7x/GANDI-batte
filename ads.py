@@ -165,7 +165,8 @@ async def forward_messages_to_groups(client, last_message, session_name):
 
 async def setup_auto_reply(client, session_name):
     """Set up auto-reply to private messages."""
-    @client.on(events.NewMessage(incoming=True))
+    delay = random.randint(15, 30)
+    @client.on(events.NewMessage(incoming=True))asyncio.sleep(delay)
     async def handler(event):
         if event.is_private:
             try:
