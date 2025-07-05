@@ -179,6 +179,11 @@ async def setup_auto_reply(client, session_name):
             except Exception as e:
                 print(Fore.RED + f"[{session_name}] Failed to reply: {str(e)}")
                 logging.error(f"[{session_name}] Failed to reply: {str(e)}")
+             
+            # Random delay between 15-30 seconds
+            delay = random.randint(15, 30)
+            print(Fore.CYAN + f"[{session_name}] Waiting {delay} seconds before next reply ...")
+            await asyncio.sleep(delay)
 
 async def run_session(session_num, client):
     """Run both forwarding and auto-reply for a session."""
